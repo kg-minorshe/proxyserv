@@ -1,0 +1,72 @@
+.elementor-counter .elementor-counter-number-suffix {
+    width: 30px;
+    flex-grow: inherit !important;
+}
+
+.elementor-counter-title {
+    text-align: left;
+    justify-content: flex-start !important;
+    flex: inherit !important;
+    width: 100%;
+}
+
+.elementor-88 .elementor-element.elementor-element-9c751b3 {
+    max-width: 300px !important;
+    width: 100%;
+}
+
+.e-con-inner.is-2 {
+    flex-wrap: wrap !important;
+}
+
+.e-con-inner.is-2 .elementor-element {
+    max-width: 700px;
+    flex: 1 1 calc(100% / 3 - 20px);
+}
+
+@media screen and (max-width: 700px) {
+    .nopd-129 {
+        margin-top: 0 !important;
+    }
+
+    .e-con-inner.is-2 .elementor-element {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+.elementskit-stars>li>a,
+.elementskit-stars>li>span {
+    color: var(--e-global-color-5046f92);
+    fill: var(--e-global-color-5046f92);
+    font-size: 16px;
+}
+
+.elementskit-stars {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 10px;
+
+}
+
+.elementskit-stars svg {
+    width: 20px;
+    height: 20px;
+}
+
+.elementskit-stars>li:not(:last-child) {
+    margin-right: 0px;
+}
+
+.safdsaf {
+    background-image: url("https://cdn1.flamp.ru/38e6e83e499a3890c0904022359534ad.jpg") !important;
+}
+.wejfnewijfn {
+    background-image: url("./wp-content/uploads/sites/27/2025/09/mail-on-QYJAPTZ.jpg") !important;
+}
+.ewfqwrvgrq {
+    background-image: url("./wp-content/uploads/sites/27/2025/09/laptop-and-A6FLVXS.jpg") !important;
+}
