@@ -79,3 +79,7 @@
     z-index: 444;
     backdrop-filter: blur(13px);
 }
+
+.elementor-element.elementor-element-0c60340.e-flex.e-con-boxed.e-con.e-parent.e-lazyloaded .e-con.e-flex>.e-con-inner {
+    flex-wrap: nowrap;
+}
