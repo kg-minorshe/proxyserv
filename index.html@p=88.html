@@ -15,9 +15,9 @@
 	</style>
 	<link rel="alternate" type="application/rss+xml" title="Vepien - VPN Service &amp; Proxy &raquo; Feed"
 		href="feed/index.html" />
-	<link rel="alternate" type="application/rss+xml" title="Vepien - VPN Service &amp; Proxy &raquo; Comments Feed"
-		href="comments/feed/index.html" />
-	<script>
+        <link rel="alternate" type="application/rss+xml" title="Vepien - VPN Service &amp; Proxy &raquo; Comments Feed"
+                href="comments/feed/index.html" />
+        <script>
 		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/templates.studioniskala.com\/vepien\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3" } };
 		/*! This file is auto-generated */
 		!function (s, n) { var o, i, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), a = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === a[t] }) } function u(e, t) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); for (var n = e.getImageData(16, 16, 1, 1), a = 0; a < n.data.length; a++)if (0 !== n.data[a]) return !1; return !0 } function f(e, t, n, a) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\udde8\ud83c\uddf6", "\ud83c\udde8\u200b\ud83c\uddf6") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !a(e, "\ud83e\udedf") }return !1 } function g(e, t, n, a) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : s.createElement("canvas"), o = r.getContext("2d", { willReadFrequently: !0 }), i = (o.textBaseline = "top", o.font = "600 32px Arial", {}); return e.forEach(function (e) { i[e] = t(o, e, n, a) }), i } function t(e) { var t = s.createElement("script"); t.src = e, t.defer = !0, s.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", i = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { s.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + g.toString() + "(" + [JSON.stringify(i), f.toString(), p.toString(), u.toString()].join(",") + "));", a = new Blob([e], { type: "text/javascript" }), r = new Worker(URL.createObjectURL(a), { name: "wpTestEmojiSupports" }); return void (r.onmessage = function (e) { c(n = e.data), r.terminate(), t(n) }) } catch (e) { } c(n = g(i, f, p, u)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
@@ -43,7 +43,33 @@
 			background: none !important;
 			padding: 0 !important;
 		}
-	</style>
+        </style>
+        <style>
+                .language-switcher {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                        margin-left: auto;
+                }
+
+                .lang-btn {
+                        background: #111;
+                        border: 1px solid #444;
+                        color: #fff;
+                        padding: 6px 10px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        font-weight: 600;
+                        letter-spacing: 0.03em;
+                        transition: all 0.2s ease;
+                }
+
+                .lang-btn:hover,
+                .lang-btn.active {
+                        border-color: #ff6b00;
+                        color: #ff6b00;
+                }
+        </style>
 	<style id='global-styles-inline-css'>
 		:root {
 			--wp--preset--aspect-ratio--square: 1;
@@ -627,12 +653,16 @@
 								alt="" srcset="./logo.png 442w, ./logo.png 300w"
 								sizes="(max-width: 442px) 100vw, 442px" /> </a>
 					</div>
-					<div class="elementor-element elementor-element-dcffe70 elementor-invisible elementor-widget elementor-widget-ekit-nav-menu"
-						data-id="dcffe70" data-element_type="widget"
-						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100}"
-						data-widget_type="ekit-nav-menu.default">
+                                        <div class="elementor-element elementor-element-dcffe70 elementor-invisible elementor-widget elementor-widget-ekit-nav-menu"
+                                                data-id="dcffe70" data-element_type="widget"
+                                                data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100}"
+                                                data-widget_type="ekit-nav-menu.default">
 
-					</div>
+                                        </div>
+                                        <div class="language-switcher">
+                                                <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+                                                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                                        </div>
 					<!-- <div class="elementor-element elementor-element-9d41762 elementor-hidden-tablet elementor-hidden-mobile elementor-invisible elementor-widget elementor-widget-button"
 						data-id="9d41762" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}"
@@ -675,15 +705,15 @@
 						data-id="86ac7cb" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}"
 						data-widget_type="heading.default">
-						<h2 class="elementor-heading-title elementor-size-default">Мобильные прокси нового поколения
-						</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="hero.title">Мобильные прокси нового поколения
+                                                </h2>
 					</div>
 					<div class="elementor-element elementor-element-87c8270 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-text-editor"
 						data-id="87c8270" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
 						data-widget_type="text-editor.default">
-						<p>Чистые мобильные IP с реальных устройств. Стабильно. Быстро. Анонимно.</p>
-						<p>Ваши задачи — наша панда-защита.</p>
+                                                <p data-i18n-key="hero.desc1">Чистые мобильные IP с реальных устройств. Стабильно. Быстро. Анонимно.</p>
+                                                <p data-i18n-key="hero.desc2">Ваши задачи — наша панда-защита.</p>
 					</div>
 					<div class="elementor-element elementor-element-9348f9f e-con-full e-flex e-con e-child"
 						data-id="9348f9f" data-element_type="container">
@@ -691,10 +721,10 @@
 							data-id="a211b30" data-element_type="widget"
 							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}"
 							data-widget_type="button.default">
-							<a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink"
-								href="#">
-								<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Зарегистрироваться</span>
+                                                        <a class="elementor-button elementor-button-link elementor-size-sm elementor-animation-shrink"
+                                                                href="#">
+                                                                <span class="elementor-button-content-wrapper">
+                                                                        <span class="elementor-button-text" data-i18n-key="hero.cta">Зарегистрироваться</span>
 								</span>
 							</a>
 						</div>
@@ -890,7 +920,7 @@
 						<div class="elementor-element elementor-element-4ed3a2c elementor-widget__width-initial elementor-widget elementor-widget-counter"
 							data-id="4ed3a2c" data-element_type="widget" data-widget_type="counter.default">
 							<div class="elementor-counter">
-								<div class="elementor-counter-title">мобильные IP</div>
+                                                            <div class="elementor-counter-title" data-i18n-key="counters.mobile">мобильные IP</div>
 								<div class="elementor-counter-number-wrapper">
 									<span class="elementor-counter-number-prefix"></span>
 									<span class="elementor-counter-number" data-duration="2000" data-to-value="100"
@@ -902,7 +932,7 @@
 						<div class="elementor-element elementor-element-b325d59 elementor-widget__width-initial elementor-widget elementor-widget-counter"
 							data-id="b325d59" data-element_type="widget" data-widget_type="counter.default">
 							<div class="elementor-counter">
-								<div class="elementor-counter-title">стран</div>
+                                                            <div class="elementor-counter-title" data-i18n-key="counters.countries">стран</div>
 								<div class="elementor-counter-number-wrapper">
 									<span class="elementor-counter-number-prefix"></span>
 									<span class="elementor-counter-number" data-duration="2000" data-to-value="70"
@@ -914,7 +944,7 @@
 						<div class="elementor-element elementor-element-b325d59 elementor-widget__width-initial elementor-widget elementor-widget-counter"
 							data-id="b325d59" data-element_type="widget" data-widget_type="counter.default">
 							<div class="elementor-counter">
-								<div class="elementor-counter-title">Моментальная активация</div>
+                                                            <div class="elementor-counter-title" data-i18n-key="counters.activation">Моментальная активация</div>
 								<div class="elementor-counter-number-wrapper" style="opacity: 0;">
 									<span class="elementor-counter-number-prefix"></span>
 									<span class="elementor-counter-number" data-duration="2000" data-to-value="70"
@@ -957,11 +987,11 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Скорость с минимальным пингом </span>
-										</h3>
-										<p>Комфортная работа даже с тяжёлыми запросами</p>
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                        <span data-i18n-key="features.speed.title">
+                                                                                                Скорость с минимальным пингом </span>
+                                                                                </h3>
+                                                                                <p data-i18n-key="features.speed.desc">Комфортная работа даже с тяжёлыми запросами</p>
 									</div>
 
 								</div>
@@ -991,12 +1021,12 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Круглосуточная поддержка </span>
-										</h3>
-										<p>Панда на связи 24/7 — Telegram, email, чат
-										</p>
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                        <span data-i18n-key="features.support.title">
+                                                                                                Круглосуточная поддержка </span>
+                                                                                </h3>
+                                                                                <p data-i18n-key="features.support.desc">Панда на связи 24/7 — Telegram, email, чат
+                                                                                </p>
 									</div>
 
 								</div>
@@ -1026,14 +1056,14 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Максимальная анонимность </span>
-										</h3>
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                        <span data-i18n-key="features.privacy.title">
+                                                                                                Максимальная анонимность </span>
+                                                                                </h3>
 
-										<p>Мобильные IP выглядят как обычные пользователи сети.
-											Нет следов дата-центров и «грязных» подсетей.
-										</p>
+                                                                                <p data-i18n-key="features.privacy.desc">Мобильные IP выглядят как обычные пользователи сети.
+                                                                                        Нет следов дата-центров и «грязных» подсетей.
+                                                                                </p>
 									</div>
 
 								</div>
@@ -1064,12 +1094,12 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Реальные мобильные устройства </span>
-										</h3>
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                        <span data-i18n-key="features.devices.title">
+                                                                                                Реальные мобильные устройства </span>
+                                                                                </h3>
 
-										<p>Каждый IP — это настоящий смартфон, а не серверная эмуляция</p>
+                                                                                <p data-i18n-key="features.devices.desc">Каждый IP — это настоящий смартфон, а не серверная эмуляция</p>
 									</div>
 
 								</div>
@@ -1100,11 +1130,11 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Поддержка TCP, UDP, QUICK, DNS (отдельный порт)</span>
-										</h3>
-										<p>Подходит для любых задач: SMM, парсинг, антидетекты, e-commerce, арбитраж</p>
+                                                                                <h3 class="elementor-icon-box-title">
+                                                                                        <span data-i18n-key="features.protocols.title">
+                                                                                                Поддержка TCP, UDP, QUICK, DNS (отдельный порт)</span>
+                                                                                </h3>
+                                                                                <p data-i18n-key="features.protocols.desc">Подходит для любых задач: SMM, парсинг, антидетекты, e-commerce, арбитраж</p>
 
 									</div>
 
@@ -1136,11 +1166,11 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Скорость без пингов</span>
-										</h3>
-										<p>Комфортная работа даже с тяжёлыми запросами</p>
+                                                                                  <h3 class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="features.lowping.title">
+                                                                                                  Скорость без пингов</span>
+                                                                                  </h3>
+                                                                                  <p data-i18n-key="features.lowping.desc">Комфортная работа даже с тяжёлыми запросами</p>
 
 									</div>
 
@@ -1195,19 +1225,19 @@
 						data-id="86ac7cb" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}"
 						data-widget_type="heading.default">
-						<h2 class="elementor-heading-title elementor-size-default">Прокси в 70+ странах мира
+                                                  <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="countries.title">Прокси в 70+ странах мира
 
-						</h2>
+                                                  </h2>
 					</div>
 					<div class="elementor-element elementor-element-87c8270 elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-text-editor"
 						data-id="87c8270" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
 						data-widget_type="text-editor.default">
-						<p>Доступны мобильные IP из разных стран.
-						</p>
-						<p>Европа, Северная Америка, Латинская Америка, Азия, Ближний Восток, Африка и пр.
-						</p>
-						<p>Актуальный список стран отображается в магазине.</p>
+                                                  <p data-i18n-key="countries.desc1">Доступны мобильные IP из разных стран.
+                                                  </p>
+                                                  <p data-i18n-key="countries.desc2">Европа, Северная Америка, Латинская Америка, Азия, Ближний Восток, Африка и пр.
+                                                  </p>
+                                                  <p data-i18n-key="countries.desc3">Актуальный список стран отображается в магазине.</p>
 					</div>
 				</div>
 			</div>
@@ -1234,7 +1264,7 @@
 							data-id="8ef0c74" data-element_type="widget"
 							data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:250}"
 							data-widget_type="heading.default">
-							<h2 class="elementor-heading-title elementor-size-default">КАК ЭТО РАБОТАЕТ?</h2>
+                                                          <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="workflow.title">КАК ЭТО РАБОТАЕТ?</h2>
 						</div>
 					</div>
 					<!-- <div class="elementor-element elementor-element-1f65489 e-con-full e-flex e-con e-child"
@@ -1276,14 +1306,14 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Выбираете тариф </span>
-										</h3>
+                                                                                  <h3 class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="workflow.step1.title">
+                                                                                                  Выбираете тариф </span>
+                                                                                  </h3>
 
-										<p class="elementor-icon-box-description">
-											Определите страну, количество IP и тип ротации.
-										</p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="workflow.step1.desc">
+                                                                                          Определите страну, количество IP и тип ротации.
+                                                                                  </p>
 
 									</div>
 
@@ -1314,13 +1344,13 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Получаете доступ в личный кабинет </span>
-										</h3>
+                                                                                  <h3 class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="workflow.step2.title">
+                                                                                                  Получаете доступ в личный кабинет </span>
+                                                                                  </h3>
 
-										<p class="elementor-icon-box-description">
-											Все данные отображаются мгновенно — без ожидания </p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="workflow.step2.desc">
+                                                                                          Все данные отображаются мгновенно — без ожидания </p>
 
 									</div>
 
@@ -1351,13 +1381,13 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Подключаетесь к прокси </span>
-										</h3>
+                                                                                  <h3 class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="workflow.step3.title">
+                                                                                                  Подключаетесь к прокси </span>
+                                                                                  </h3>
 
-										<p class="elementor-icon-box-description">
-											Через SOCKS5 или HTTP/HTTPS </p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="workflow.step3.desc">
+                                                                                          Через SOCKS5 или HTTP/HTTPS </p>
 									</div>
 
 								</div>
@@ -1387,13 +1417,13 @@
 
 									<div class="elementor-icon-box-content">
 
-										<h3 class="elementor-icon-box-title">
-											<span>
-												Работаете без ограничений </span>
-										</h3>
+                                                                                  <h3 class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="workflow.step4.title">
+                                                                                                  Работаете без ограничений </span>
+                                                                                  </h3>
 
-										<p class="elementor-icon-box-description">
-											Стабильно, анонимно, безопасно </p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="workflow.step4.desc">
+                                                                                          Стабильно, анонимно, безопасно </p>
 
 									</div>
 
@@ -1413,8 +1443,8 @@
 						data-id="088471c" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:250}"
 						data-widget_type="heading.default">
-						<h2 class="elementor-heading-title elementor-size-default">Типы Прокси и их отличие
-						</h2>
+                                                  <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="types.title">Типы Прокси и их отличие
+                                                  </h2>
 					</div>
 				</div>
 			</div>
@@ -1438,14 +1468,14 @@
 
 									<div class="elementor-icon-box-content">
 
-										<div class="elementor-icon-box-title">
-											<span>
-												Мобильные </span>
-										</div>
+                                                                                  <div class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="types.mobile.title">
+                                                                                                  Мобильные </span>
+                                                                                  </div>
 
-										<p class="elementor-icon-box-description">
-											Лучшее решение для соцсетей, маркетплейсов и работы с антидетект-браузерами
-										</p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="types.mobile.desc">
+                                                                                          Лучшее решение для соцсетей, маркетплейсов и работы с антидетект-браузерами
+                                                                                  </p>
 
 									</div>
 
@@ -1492,15 +1522,15 @@
 
 									<div class="elementor-icon-box-content">
 
-										<div class="elementor-icon-box-title">
-											<span>
-												Back-connect </span>
-										</div>
+                                                                                  <div class="elementor-icon-box-title">
+                                                                                          <span data-i18n-key="types.backconnect.title">
+                                                                                                  Back-connect </span>
+                                                                                  </div>
 
-										<p class="elementor-icon-box-description">
-											Подключение к большому пулу мобильных IP.
-											Гибкость и масштаб без ограничений.
-										</p>
+                                                                                  <p class="elementor-icon-box-description" data-i18n-key="types.backconnect.desc">
+                                                                                          Подключение к большому пулу мобильных IP.
+                                                                                          Гибкость и масштаб без ограничений.
+                                                                                  </p>
 									</div>
 
 								</div>
@@ -1674,17 +1704,17 @@
 								data-id="54ada16" data-element_type="widget"
 								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:250}"
 								data-widget_type="heading.default">
-								<h2 class="elementor-heading-title elementor-size-default">Мы делаем ставку на доверие
-								</h2>
+                                                                  <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="trust.title">Мы делаем ставку на доверие
+                                                                  </h2>
 							</div>
 							<div class="elementor-element elementor-element-69ccaec elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-text-editor"
 								data-id="69ccaec" data-element_type="widget"
 								data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}"
 								data-widget_type="text-editor.default">
-								<p>→ Прозрачная работа без скрытых условий</p>
-								<p>→ Защита данных и шифрованные соединения</p>
-								<p>→ Юридическая информация и реальные контакты</p>
-								<p>→ Поддерживаем честное использование — никаких серых схем</p>
+                                                                  <p data-i18n-key="trust.point1">→ Прозрачная работа без скрытых условий</p>
+                                                                  <p data-i18n-key="trust.point2">→ Защита данных и шифрованные соединения</p>
+                                                                  <p data-i18n-key="trust.point3">→ Юридическая информация и реальные контакты</p>
+                                                                  <p data-i18n-key="trust.point4">→ Поддерживаем честное использование — никаких серых схем</p>
 							</div>
 							<!-- <div class="elementor-element elementor-element-4243f26 elementor-invisible elementor-widget elementor-widget-button"
 								data-id="4243f26" data-element_type="widget"
@@ -1737,7 +1767,7 @@
 						data-id="19c42d1" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_animation_delay&quot;:250}"
 						data-widget_type="heading.default">
-						<h2 class="elementor-heading-title elementor-size-default">Удобный личный кабинет</h2>
+                                                <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="dashboard.title">Удобный личный кабинет</h2>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-35571f6 e-con-full e-flex e-con e-child"
@@ -1765,19 +1795,19 @@
 						</div>
 						<div class="elementor-element elementor-element-7fa603d elementor-widget elementor-widget-heading"
 							data-id="7fa603d" data-element_type="widget" data-widget_type="heading.default">
-							<h2 class="elementor-heading-title elementor-size-default">Простой, быстрый и понятный даже
-								новичку.
+                                                          <h2 class="elementor-heading-title elementor-size-default" data-i18n-key="dashboard.subtitle">Простой, быстрый и понятный даже
+                                                                  новичку.
 
-							</h2>
+                                                          </h2>
 						</div>
 						<div class="elementor-element elementor-element-7a35c9a elementor-widget elementor-widget-text-editor"
 							data-id="7a35c9a" data-element_type="widget" data-widget_type="text-editor.default">
-							<p>управление прокси,
-								настройка ротации,
-								статистика подключения,
-								баланс и продление,
-								доступ к API.
-							</p>
+                                                          <p data-i18n-key="dashboard.features">управление прокси,
+                                                                  настройка ротации,
+                                                                  статистика подключения,
+                                                                  баланс и продление,
+                                                                  доступ к API.
+                                                          </p>
 						</div>
 					</div>
 					<div class="elementor-element elementor-element-9d4e9e6 e-con-full e-flex elementor-invisible e-con e-child"
@@ -2755,11 +2785,108 @@
 		id="qi-addons-for-elementor-elementor-js"></script>
 	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js@ver=3.7.6"
 		id="animate-circle-js"></script>
-	<script id="elementskit-elementor-js-extra">
-		var ekit_config = { "ajaxurl": "https:\/\/templates.studioniskala.com\/vepien\/wp-admin\/admin-ajax.php", "nonce": "aeb7e46cf8" };
-	</script>
-	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js@ver=3.7.6"
-		id="elementskit-elementor-js"></script>
+        <script id="elementskit-elementor-js-extra">
+                var ekit_config = { "ajaxurl": "https:\/\/templates.studioniskala.com\/vepien\/wp-admin\/admin-ajax.php", "nonce": "aeb7e46cf8" };
+        </script>
+        <script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js@ver=3.7.6"
+                id="elementskit-elementor-js"></script>
+
+<script>
+        const translationEntries = [
+                { key: 'meta.title', selector: 'title', ru: 'ProxyPanda.shop — мобильные прокси нового поколения.', en: 'ProxyPanda.shop — next-generation mobile proxies.', mode: 'text' },
+                { key: 'hero.title', selector: '[data-i18n-key="hero.title"]', ru: 'Мобильные прокси нового поколения', en: 'Next-generation mobile proxies', mode: 'text' },
+                { key: 'hero.desc1', selector: '[data-i18n-key="hero.desc1"]', ru: 'Чистые мобильные IP с реальных устройств. Стабильно. Быстро. Анонимно.', en: 'Clean mobile IPs from real devices. Stable. Fast. Anonymous.', mode: 'text' },
+                { key: 'hero.desc2', selector: '[data-i18n-key="hero.desc2"]', ru: 'Ваши задачи — наша панда-защита.', en: 'Your tasks get panda-level protection.', mode: 'text' },
+                { key: 'hero.cta', selector: '[data-i18n-key="hero.cta"]', ru: 'Зарегистрироваться', en: 'Sign up', mode: 'text' },
+                { key: 'counters.mobile', selector: '[data-i18n-key="counters.mobile"]', ru: 'мобильные IP', en: 'mobile IPs', mode: 'text' },
+                { key: 'counters.countries', selector: '[data-i18n-key="counters.countries"]', ru: 'стран', en: 'countries', mode: 'text' },
+                { key: 'counters.activation', selector: '[data-i18n-key="counters.activation"]', ru: 'Моментальная активация', en: 'Instant activation', mode: 'text' },
+                { key: 'features.speed.title', selector: '[data-i18n-key="features.speed.title"]', ru: 'Скорость с минимальным пингом', en: 'Speed with minimal ping', mode: 'text' },
+                { key: 'features.speed.desc', selector: '[data-i18n-key="features.speed.desc"]', ru: 'Комфортная работа даже с тяжёлыми запросами', en: 'Comfortable performance even with heavy requests', mode: 'text' },
+                { key: 'features.support.title', selector: '[data-i18n-key="features.support.title"]', ru: 'Круглосуточная поддержка', en: '24/7 support', mode: 'text' },
+                { key: 'features.support.desc', selector: '[data-i18n-key="features.support.desc"]', ru: 'Панда на связи 24/7 — Telegram, email, чат', en: 'The panda is online 24/7 — Telegram, email, chat', mode: 'text' },
+                { key: 'features.privacy.title', selector: '[data-i18n-key="features.privacy.title"]', ru: 'Максимальная анонимность', en: 'Maximum anonymity', mode: 'text' },
+                { key: 'features.privacy.desc', selector: '[data-i18n-key="features.privacy.desc"]', ru: 'Мобильные IP выглядят как обычные пользователи сети. Нет следов дата-центров и «грязных» подсетей.', en: 'Mobile IPs look like regular network users. No traces of data centers or “dirty” subnets.', mode: 'text' },
+                { key: 'features.devices.title', selector: '[data-i18n-key="features.devices.title"]', ru: 'Реальные мобильные устройства', en: 'Real mobile devices', mode: 'text' },
+                { key: 'features.devices.desc', selector: '[data-i18n-key="features.devices.desc"]', ru: 'Каждый IP — это настоящий смартфон, а не серверная эмуляция', en: 'Every IP comes from a real smartphone, not server emulation', mode: 'text' },
+                { key: 'features.protocols.title', selector: '[data-i18n-key="features.protocols.title"]', ru: 'Поддержка TCP, UDP, QUICK, DNS (отдельный порт)', en: 'Support for TCP, UDP, QUICK, DNS (dedicated port)', mode: 'text' },
+                { key: 'features.protocols.desc', selector: '[data-i18n-key="features.protocols.desc"]', ru: 'Подходит для любых задач: SMM, парсинг, антидетекты, e-commerce, арбитраж', en: 'Suitable for any task: SMM, scraping, antidetects, e-commerce, arbitrage', mode: 'text' },
+                { key: 'features.lowping.title', selector: '[data-i18n-key="features.lowping.title"]', ru: 'Скорость без пингов', en: 'Lag-free speed', mode: 'text' },
+                { key: 'features.lowping.desc', selector: '[data-i18n-key="features.lowping.desc"]', ru: 'Комфортная работа даже с тяжёлыми запросами', en: 'Comfortable work even with heavy requests', mode: 'text' },
+                { key: 'countries.title', selector: '[data-i18n-key="countries.title"]', ru: 'Прокси в 70+ странах мира', en: 'Proxies in 70+ countries worldwide', mode: 'text' },
+                { key: 'countries.desc1', selector: '[data-i18n-key="countries.desc1"]', ru: 'Доступны мобильные IP из разных стран.', en: 'Mobile IPs are available from multiple countries.', mode: 'text' },
+                { key: 'countries.desc2', selector: '[data-i18n-key="countries.desc2"]', ru: 'Европа, Северная Америка, Латинская Америка, Азия, Ближний Восток, Африка и пр.', en: 'Europe, North America, Latin America, Asia, the Middle East, Africa, and more.', mode: 'text' },
+                { key: 'countries.desc3', selector: '[data-i18n-key="countries.desc3"]', ru: 'Актуальный список стран отображается в магазине.', en: 'The current list of countries is shown in the store.', mode: 'text' },
+                { key: 'workflow.title', selector: '[data-i18n-key="workflow.title"]', ru: 'КАК ЭТО РАБОТАЕТ?', en: 'HOW DOES IT WORK?', mode: 'text' },
+                { key: 'workflow.step1.title', selector: '[data-i18n-key="workflow.step1.title"]', ru: 'Выбираете тариф', en: 'Choose your plan', mode: 'text' },
+                { key: 'workflow.step1.desc', selector: '[data-i18n-key="workflow.step1.desc"]', ru: 'Определите страну, количество IP и тип ротации.', en: 'Pick a country, IP count, and rotation type.', mode: 'text' },
+                { key: 'workflow.step2.title', selector: '[data-i18n-key="workflow.step2.title"]', ru: 'Получаете доступ в личный кабинет', en: 'Get access to your account', mode: 'text' },
+                { key: 'workflow.step2.desc', selector: '[data-i18n-key="workflow.step2.desc"]', ru: 'Все данные отображаются мгновенно — без ожидания', en: 'All data appears instantly—no waiting.', mode: 'text' },
+                { key: 'workflow.step3.title', selector: '[data-i18n-key="workflow.step3.title"]', ru: 'Подключаетесь к прокси', en: 'Connect to the proxy', mode: 'text' },
+                { key: 'workflow.step3.desc', selector: '[data-i18n-key="workflow.step3.desc"]', ru: 'Через SOCKS5 или HTTP/HTTPS', en: 'Use SOCKS5 or HTTP/HTTPS', mode: 'text' },
+                { key: 'workflow.step4.title', selector: '[data-i18n-key="workflow.step4.title"]', ru: 'Работаете без ограничений', en: 'Work without limits', mode: 'text' },
+                { key: 'workflow.step4.desc', selector: '[data-i18n-key="workflow.step4.desc"]', ru: 'Стабильно, анонимно, безопасно', en: 'Stable, anonymous, and safe', mode: 'text' },
+                { key: 'types.title', selector: '[data-i18n-key="types.title"]', ru: 'Типы Прокси и их отличие', en: 'Proxy types and how they differ', mode: 'text' },
+                { key: 'types.mobile.title', selector: '[data-i18n-key="types.mobile.title"]', ru: 'Мобильные', en: 'Mobile', mode: 'text' },
+                { key: 'types.mobile.desc', selector: '[data-i18n-key="types.mobile.desc"]', ru: 'Лучшее решение для соцсетей, маркетплейсов и работы с антидетект-браузерами', en: 'The best option for social networks, marketplaces, and antidetect browsers', mode: 'text' },
+                { key: 'types.backconnect.title', selector: '[data-i18n-key="types.backconnect.title"]', ru: 'Back-connect', en: 'Back-connect', mode: 'text' },
+                { key: 'types.backconnect.desc', selector: '[data-i18n-key="types.backconnect.desc"]', ru: 'Подключение к большому пулу мобильных IP. Гибкость и масштаб без ограничений.', en: 'Connect to a large pool of mobile IPs. Flexibility and scale without limits.', mode: 'text' },
+                { key: 'trust.title', selector: '[data-i18n-key="trust.title"]', ru: 'Мы делаем ставку на доверие', en: 'We bet on trust', mode: 'text' },
+                { key: 'trust.point1', selector: '[data-i18n-key="trust.point1"]', ru: '→ Прозрачная работа без скрытых условий', en: '→ Transparent operations with no hidden terms', mode: 'text' },
+                { key: 'trust.point2', selector: '[data-i18n-key="trust.point2"]', ru: '→ Защита данных и шифрованные соединения', en: '→ Data protection and encrypted connections', mode: 'text' },
+                { key: 'trust.point3', selector: '[data-i18n-key="trust.point3"]', ru: '→ Юридическая информация и реальные контакты', en: '→ Legal information and real contacts', mode: 'text' },
+                { key: 'trust.point4', selector: '[data-i18n-key="trust.point4"]', ru: '→ Поддерживаем честное использование — никаких серых схем', en: '→ We support fair use—no shady schemes', mode: 'text' },
+                { key: 'dashboard.title', selector: '[data-i18n-key="dashboard.title"]', ru: 'Удобный личный кабинет', en: 'Convenient dashboard', mode: 'text' },
+                { key: 'dashboard.subtitle', selector: '[data-i18n-key="dashboard.subtitle"]', ru: 'Простой, быстрый и понятный даже\n                                                                  новичку.', en: 'Simple, fast, and clear\n                                                                  even for newcomers.', mode: 'text' },
+                { key: 'dashboard.features', selector: '[data-i18n-key="dashboard.features"]', ru: 'управление прокси,\n                                                                  настройка ротации,\n                                                                  статистика подключения,\n                                                                  баланс и продление,\n                                                                  доступ к API.', en: 'proxy management,\n                                                                  rotation setup,\n                                                                  connection analytics,\n                                                                  balance and renewal,\n                                                                  API access.', mode: 'text' },
+                { key: 'footer.tagline', ru: 'мобильные прокси нового поколения.', en: 'next-generation mobile proxies.', mode: 'text' }
+        ];
+
+        const translationCache = new Map();
+
+        function collectTranslationTargets() {
+            translationEntries.forEach((entry) => {
+                if (entry.selector) {
+                    translationCache.set(entry.key, Array.from(document.querySelectorAll(entry.selector)));
+                } else {
+                    const matches = Array.from(document.querySelectorAll('body *')).filter((el) => {
+                        if (['SCRIPT', 'STYLE'].includes(el.tagName)) return false;
+                        if (el.children.length > 0) return false;
+                        return el.textContent.trim() === entry.ru.trim();
+                    });
+                    translationCache.set(entry.key, matches);
+                }
+            });
+        }
+
+        function applyLanguage(lang) {
+            const useEnglish = lang === 'en';
+            translationEntries.forEach((entry) => {
+                const nodes = translationCache.get(entry.key) || [];
+                nodes.forEach((node) => {
+                    const prop = entry.mode === 'html' ? 'innerHTML' : 'textContent';
+                    if (!node.dataset.originalContent) {
+                        node.dataset.originalContent = node[prop];
+                    }
+                    node[prop] = useEnglish ? entry.en : entry.ru;
+                });
+            });
+            document.documentElement.lang = useEnglish ? 'en' : 'ru';
+            localStorage.setItem('preferredLanguage', useEnglish ? 'en' : 'ru');
+            document.querySelectorAll('.lang-btn').forEach((btn) => {
+                btn.classList.toggle('active', btn.dataset.lang === (useEnglish ? 'en' : 'ru'));
+            });
+        }
+
+        collectTranslationTargets();
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'ru';
+        applyLanguage(savedLanguage);
+        document.querySelectorAll('.lang-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                applyLanguage(button.dataset.lang);
+            });
+        });
+</script>
 
 </body>
 
